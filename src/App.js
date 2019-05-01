@@ -10,6 +10,7 @@ import Home from './Home'
 import Bananas from './Bananas'
 import Bread from './Bread'
 import PageNotFound from './PageNotFound'
+import ShowBanana from './ShowBanana'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Link to="/bread">BREAD</Link>
         <Link to="/NOTHING">NOTHING</Link>
 
+
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/bananas" component={Bananas}/>
@@ -28,6 +30,7 @@ function App() {
           <Route component={PageNotFound}/>
 
         </Switch>
+          <Route path="/bananas/:banana" component={ShowBanana}/>
 
       </header>
     </div>
