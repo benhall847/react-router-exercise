@@ -3,7 +3,8 @@ import './App.css';
 import {
   Link,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom'
 import Home from './Home'
 import Bananas from './Bananas'
@@ -18,12 +19,14 @@ function App() {
         <Link to="/">HOME</Link>
         <Link to="/bananas">BANANAS</Link>
         <Link to="/bread">BREAD</Link>
+        <Link to="/NOTHING">NOTHING</Link>
 
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/bananas" component={Bananas}/>
           <Route path="/bread" component={Bread}/>
           <Route component={PageNotFound}/>
+
         </Switch>
 
       </header>
